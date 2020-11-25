@@ -1,0 +1,119 @@
+{
+  "tabmenu": [
+    { "name": "首页" },
+    { "name": "推荐" },
+    { "name": "视频" },
+    { "name": "综艺" },
+    { "name": "电影" }
+  ],
+  "operational": [
+    {
+      "loginName": "1",
+      "userName": "秦时明月",
+      "companyName": "华为",
+      "deptName": "事业部",
+      "sex": "男",
+      "loginCount": "1400",
+      "menuUseCount": "4132"
+    }, {
+      "loginName": "2",
+      "userName": "太空救援",
+      "companyName": "京东",
+      "deptName": "研发部",
+      "sex": "男",
+      "loginCount": "400",
+      "menuUseCount": "1232"
+    }, {
+      "loginName": "3",
+      "userName": "楚门的世界",
+      "companyName": "阿里",
+      "deptName": "人力部",
+      "sex": "男",
+      "loginCount": "231",
+      "menuUseCount": "683"
+    }, {
+      "loginName": "4",
+      "userName": "看不见的客人",
+      "companyName": "腾讯",
+      "deptName": "事业部",
+      "sex": "男",
+      "loginCount": "431",
+      "menuUseCount": "931"
+    }, {
+      "loginName": "5",
+      "userName": "轮到你了",
+      "companyName": "字节",
+      "deptName": "产品部",
+      "sex": "女",
+      "loginCount": "23",
+      "menuUseCount": "213"
+    }, {
+      "loginName": "6",
+      "userName": "复仇者联盟",
+      "companyName": "亚信",
+      "deptName": "公关部",
+      "sex": "男",
+      "loginCount": "2321",
+      "menuUseCount": "6132"
+    }, {
+    }
+  ],
+  "userOpDetails": [
+    {
+      "id": "1",
+      "menuName": "mei",
+      "subMenuName": "资源详情",
+      "requestTime": "2020-08-20"
+    }, {
+      "id": "2",
+      "menuName": "管理",
+      "subMenuName": "资源详情",
+      "requestTime": "2020-08-20"
+    }, {
+      "id": "3",
+      "menuName": "营销",
+      "subMenuName": "资源详",
+      "requestTime": "2020-08-20"
+    }, {
+      "id": "4",
+      "menuName": "12",
+      "subMenuName": "13214",
+      "requestTime": "2020-08-20"
+    }, {
+      "id": "5",
+      "menuName": "驱蚊",
+      "subMenuName": "全职",
+      "requestTime": "2020-08-20"
+    }, {
+      "id": "6",
+      "menuName": "放热水",
+      "subMenuName": "范德萨",
+      "requestTime": "2020-08-20"
+    }, {
+      "id": "7",
+      "menuName": "营",
+      "subMenuName": "资源详情",
+      "requestTime": "2020-08-20"
+    }, {
+      "id": "8",
+      "menuName": "eqw",
+      "subMenuName": "q123",
+      "requestTime": "2020-08-20"
+    }, {
+      "id": "9",
+      "menuName": "312weq",
+      "subMenuName": "资源详情",
+      "requestTime": "2020-08-20"
+    }, {
+      "id": "10",
+      "menuName": "asd",
+      "subMenuName": "资源详情",
+      "requestTime": "2020-08-20"
+    }, {
+      "id": "11",
+      "menuName": "营销资源管理",
+      "subMenuName": "资源详情",
+      "requestTime": "2020-08-20"
+    }
+  ]
+}
