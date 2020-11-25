@@ -1,38 +1,32 @@
 <template>
   <div class="navTwoData">
-    <el-container>
-      <el-header><Header></Header></el-header>
-      <el-container>
-        <el-aside width="250px"><Left></Left></el-aside>
-        <el-main>
-          <h3>
-            <span class="le">营销素材管理</span> 
-            <span class="ri">
-              <router-link to="/datadragg" target="_blank">
-                <i class="el-icon-plus"></i> 
-                新建活动
-              </router-link>
-            </span>
-          </h3>
-          <div class="data-body">
-            <el-table
-              :data="activeData"
-              stripe
-              height="500px"
-              style="width: 100%">
-              <el-table-column prop="name" label="姓名" width="200"></el-table-column>
-              <el-table-column prop="age" label="年龄" width="200"></el-table-column>
-              <el-table-column prop="phone" label="电话" width="200"></el-table-column>
-              <el-table-column prop="address" label="地址" width="200"></el-table-column>
-              <el-table-column prop="" label="操作">
-                <el-button type="primary" icon="el-icon-edit" circle></el-button>
-                <el-button type="danger" icon="el-icon-delete" circle></el-button>
-              </el-table-column>
-            </el-table>
-          </div>
-        </el-main>
-      </el-container>
-    </el-container>
+    <el-header>
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item>活动页面制作</el-breadcrumb-item>
+      </el-breadcrumb>
+      <span class="ri">
+        <a href="http://localhost:8081/datadragg">新建活动</a>
+        
+      </span>
+    </el-header>
+    <el-main>
+      <div class="data-body">
+        <el-table
+          :data="activeData"
+          stripe
+          style="width: 100%">
+          <el-table-column prop="name" label="姓名" width="200"></el-table-column>
+          <el-table-column prop="age" label="年龄" width="200"></el-table-column>
+          <el-table-column prop="phone" label="电话" width="200"></el-table-column>
+          <el-table-column prop="address" label="地址" width="200"></el-table-column>
+          <el-table-column prop="" label="操作">
+            <el-button type="primary" icon="el-icon-edit" circle></el-button>
+            <el-button type="danger" icon="el-icon-delete" circle></el-button>
+          </el-table-column>
+        </el-table>
+      </div>
+    </el-main>
   </div>
 </template>
 
@@ -76,30 +70,20 @@ export default {
 </script>
 
 <style scoped>
+
   .data-body{
     padding: 20px 50px;
     margin-top: 50px;
   }
-
-  h3{
-    background-color: #ddd;
-    padding: 10px 30px;
-    margin: 0;
-    position: fixed;
-    width: 100%;
-  }
-
-  h3 .le{
+  .le{
     border-left: 5px solid #3399ff;
     padding: 0 15px;
   }
-
   a{
     text-decoration: none;
     color: #fff;
   }
-
-  h3 .ri{
+  .ri{
     right: 70px;
     float: right;
     font-weight: 100;
@@ -108,11 +92,10 @@ export default {
     padding: 5px 7px;
     border-radius: 5px;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     z-index: 100;
   }
-
-  h3 .ri:hover{
+  .ri:hover{
     background: #4fadff;
   }
 

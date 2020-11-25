@@ -1,6 +1,7 @@
 <template>
   <div class="index">
-    <el-container>
+    <router-view></router-view>
+    <!-- <el-container>
       <el-header>
         <Header></Header>
       </el-header>
@@ -17,7 +18,7 @@
           </el-footer>
         </el-container>
       </el-container>
-    </el-container>
+    </el-container> -->
   </div>
 </template>
 
@@ -40,24 +41,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.el-header{
-  padding: 0;
-}
-.el-aside{
-  width: 230px !important;
-}
-.el-main{
-  display: block;
-  background: #fff;
-  box-shadow: -1px 1px 10px 5px #ddd;
-  margin: 20px;
-  padding: 0px !important;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-.el-footer{
-  text-align: center;
-  height: 150px !important;
-}
+<style>
+
 </style>

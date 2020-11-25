@@ -20,14 +20,14 @@
                 <span>营销资源管理</span>
             </el-menu-item>
 
-            <el-menu-item index="/navthree">
+            <el-menu-item index="/datadragg">
               <i class="el-icon-document"></i>
-              <span slot="title">营销素材管理</span>
+              <span slot="title">活动页面制作</span>
             </el-menu-item>
 
-            <el-menu-item index="/navfour">
+            <el-menu-item index="/jingdong">
               <i class="el-icon-data-line"></i>
-              <span slot="title">营销模式管理</span>
+              <span slot="title">京东商城制作</span>
             </el-menu-item>
 
             <el-submenu index="1">
@@ -37,10 +37,10 @@
               </template>
               <el-menu-item-group>
                 <el-menu-item index="/activity">活动报备管理</el-menu-item>
-                <el-menu-item index="/navtwo">活动页面制作</el-menu-item>
-                <el-menu-item index="/jingdong">京东商城制作</el-menu-item>
                 <el-menu-item index="/turn-picture">翻转照片审核</el-menu-item>
                 <el-menu-item index="/picture">照片页面审核</el-menu-item>
+                <el-menu-item index="/navthree">营销素材管理</el-menu-item>
+                <el-menu-item index="/navfour">营销模式管理</el-menu-item>
                 <el-menu-item index="/demo">代码测试审核</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
@@ -66,7 +66,7 @@
                 <span>测试代码组件</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="2-1">1</el-menu-item>
+                <el-menu-item index="/navtwo">活动页面制作</el-menu-item>
                 <el-menu-item index="2-2">2</el-menu-item>
                 <el-menu-item index="2-3">3</el-menu-item>
                 <el-menu-item index="2-4">4</el-menu-item>
