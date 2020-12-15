@@ -21,14 +21,14 @@
                 <main class="main-main">
                   <el-form :inline="true" :model="newTableData" class="demo-form-inline">
                     <el-form-item>
-                      <el-input v-model="newTableData.name" placeholder="姓名"></el-input>
+                      <el-input v-model="newTableData.name" placeholder="请输入搜索条件"></el-input>
                     </el-form-item>
                     <el-form-item>
-                      <el-button type="primary">查询</el-button>
-                      <el-button type="primary" @click="reset">重置</el-button>
+                      <el-button type="primary" class="primary">查询</el-button>
+                      <el-button type="primary" class="primary" @click="reset">重置</el-button>
                     </el-form-item>
                     <el-form-item class="addBtn">
-                      <el-button type="primary"><i class="el-icon-plus"></i>添加用户资源</el-button>
+                      <el-button type="primary" class="primary"><i class="el-icon-plus"></i>添加用户资源</el-button>
                     </el-form-item>
                   </el-form>
                   <div class="data-body">
@@ -37,13 +37,14 @@
                       stripe
                       style="width: 100%"
                     >
-                      <el-table-column prop="name" label="姓名" width="200"></el-table-column>
-                      <el-table-column prop="age" label="年龄" width="200"></el-table-column>
-                      <el-table-column prop="phone" label="电话" width="200"></el-table-column>
-                      <el-table-column prop="address" label="地址" width="200"></el-table-column>
+                      <el-table-column prop="name" label="姓名" width="170"></el-table-column>
+                      <el-table-column prop="age" label="年龄" width="170"></el-table-column>
+                      <el-table-column prop="phone" label="电话" width="170"></el-table-column>
+                      <el-table-column prop="address" label="地址" width="170"></el-table-column>
+                      <el-table-column prop="company" label="公司" width="170"></el-table-column>
                       <el-table-column prop="" label="操作">
                         <template slot-scope="scope">
-                          <el-button type="primary" icon="el-icon-edit" circle @click="editUser(scope.row, scope.$index)"></el-button>
+                          <el-button type="primary" class="primary" icon="el-icon-edit" circle @click="editUser(scope.row, scope.$index)"></el-button>
                           <el-button type="danger" icon="el-icon-delete" circle @click="deleteUser(scope.$index)"></el-button>
                         </template>
                       </el-table-column>
@@ -68,17 +69,20 @@
                 :before-close="handleClose">
                 <div>
                   <el-form ref="form" :model="editData" label-width="80px">
-                    <el-form-item label="姓名">
+                    <el-form-item label="*姓名">
                       <el-input v-model="editData.name"></el-input>
                     </el-form-item>
-                    <el-form-item label="年龄">
+                    <el-form-item label="*年龄">
                       <el-input v-model="editData.age"></el-input>
                     </el-form-item>
-                    <el-form-item label="电话">
+                    <el-form-item label="*电话">
                       <el-input v-model="editData.phone"></el-input>
                     </el-form-item>
                     <el-form-item label="地址">
                       <el-input v-model="editData.address"></el-input>
+                    </el-form-item>
+                    <el-form-item label="公司">
+                      <el-input v-model="editData.company"></el-input>
                     </el-form-item>
                   </el-form>
                 </div>
@@ -122,7 +126,8 @@ export default {
         name: '',
         age: '',
         phone: '',
-        address: ''
+        address: '',
+        company: ''
       },
       userIdx: 0,
       // newAddData: {
@@ -157,7 +162,8 @@ export default {
         name: item.name,
         age: item.age,
         phone: item.phone,
-        address: item.address
+        address: item.address,
+        company: item.company
       }
       this.dialogVisible = true
     },

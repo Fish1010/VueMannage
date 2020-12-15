@@ -36,9 +36,9 @@
                 <span>营销活动管理</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="/activity">活动报备管理</el-menu-item>
-                <el-menu-item index="/turn-picture">翻转照片审核</el-menu-item>
-                <el-menu-item index="/picture">照片页面审核</el-menu-item>
+                <el-menu-item index="/activity">漏洞监控管理</el-menu-item>
+                <el-menu-item index="/turn-picture">翻页照片审核</el-menu-item>
+                <el-menu-item index="/picture">旋转照片审核</el-menu-item>
                 <el-menu-item index="/navthree">营销素材管理</el-menu-item>
                 <el-menu-item index="/navfour">营销模式管理</el-menu-item>
                 <el-menu-item index="/demo">代码测试审核</el-menu-item>

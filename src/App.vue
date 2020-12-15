@@ -29,4 +29,8 @@ ul, li{
   margin: 0;
   list-style: none;
 }
+p{
+  margin: 0;
+  padding: 0;
+}
 </style>

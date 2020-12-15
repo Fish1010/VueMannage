@@ -19,7 +19,6 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    // { path: '/', name: 'DataClass', component: DataClass },
     { path: '/', name: 'NavOneData', component: NavOneData },
     { path: '/navtwo', name: 'NavTwoData', component: NavTwoData },
     { path: '/navfour', name: 'NavFourData', component: NavFourData },
@@ -27,9 +26,8 @@ export default new Router({
     { path: '/turn-picture', name: 'TurnPicture', component: TurnPicture},
     { path: '/jingdong', name: 'JingDong', component: JingDong},
     { path: '/demo', name: 'Demo', component: Demo},
-
-    { path: '/navthree', 
-      name: 'NavThreeData', 
+    { path: '/navthree',
+      name: 'NavThreeData',
       component: NavThreeData,
       // children: [
       //   { path: 'activity',
@@ -42,8 +40,6 @@ export default new Router({
       //   }
       // ]
     },
-
-
     { path: '/datadragg', name: 'DataDraggAble', component: DataDraggAble },
     { path: '/activity', name: 'MarketActivityManagement', component: MarketActivityManagement },
     { path: '/operation', name: 'MarketOperationAnalysis', component: MarketOperationAnalysis },

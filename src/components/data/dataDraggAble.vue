@@ -2,9 +2,8 @@
   <div class="dataDraggAble">
     <div class="header">
       <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item>营销活动管理</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
         <el-breadcrumb-item>活动页面制作</el-breadcrumb-item>
-        <el-breadcrumb-item>新建活动页面</el-breadcrumb-item>
       </el-breadcrumb>
       <div class="form" style="height: 50px">
         <el-form :inline="true" :model="form" class="demo-form-inline">

@@ -41,6 +41,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.primary{
+  background: #549fff;
+}
 </style>

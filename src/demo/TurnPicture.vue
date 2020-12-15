@@ -1,5 +1,6 @@
 <template>
   <div class="body">
+    <h4 style="text-align: center">点击照片右边翻转</h4>
     <div class="big">
       <div id="left" @click="turn">
         <div class="prev"></div>
@@ -26,7 +27,6 @@ export default {
       var timer = setInterval(function(){
         left.style.transform = "rotateY("+ (x--) * 2 +"deg)"
         if( x == (-90) ){
-          console.log(1)
           clearInterval(timer)
         }
       }, 30);

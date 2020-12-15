@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .active{
   padding: 5px 20px;
   background: #eee;
