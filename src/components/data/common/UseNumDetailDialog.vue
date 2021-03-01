@@ -42,7 +42,7 @@
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 export default {
   name: 'use-num-detail-dialog',
   components: {
@@ -140,6 +140,9 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'getOpDetails'
+    ]),
     handleChange (value) {
       // console.log(value);
     },
@@ -148,10 +151,15 @@ export default {
     },
   },
   computed: {
-    ...mapState(['userOpDetails'])
+    ...mapState({
+      userOpDetails: ({draggAble}) => draggAble.userOpDetails,
+    })
   },
   mounted () {
-  }
+  },
+  created () {
+    this.getOpDetails()
+  },
 }
 </script>
 <style scoped>

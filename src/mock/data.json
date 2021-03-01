@@ -115,5 +115,23 @@
       "subMenuName": "资源详情",
       "requestTime": "2020-08-20"
     }
+  ],
+  "userOpDetail": [
+    {
+      "id": 1,
+      "logTime": "2020-8-1"
+    },
+    {
+      "id": 2,
+      "logTime": "2020-8-1"
+    },
+    {
+      "id": 3,
+      "logTime": "2020-8-1"
+    },
+    {
+      "id": 4,
+      "logTime": "2020-8-1"
+    }
   ]
 }

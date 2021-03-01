@@ -7,13 +7,13 @@
       <el-table :data="userOpDetail"
                 max-height="430">
         <el-table-column property="id" label="序号" width="250"></el-table-column>
-        <el-table-column property="requestTime" label="登录时间"></el-table-column>
+        <el-table-column property="logTime" label="登录时间"></el-table-column>
       </el-table>
     </el-dialog>
   </div>
 </template>
 <script>
-// import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 export default {
   name: 'log-num-detail-dialog',
   components: {
@@ -21,13 +21,20 @@ export default {
   data () {
     return {
       dialogTableVisible: true,
-      userOpDetail: [],
     }
   },
   computed: {
-    // ...mapState({
-    //   userOpDetail: ({analysis}) => analysis.userOpDetail,
-    // })
+    ...mapState({
+      userOpDetail: ({draggAble}) => draggAble.userOpDetail,
+    })
+  },
+  methods: {
+    ...mapActions([
+      'getOpDetail'
+    ]),
+  },
+  created () {
+    this.getOpDetail();
   },
   mounted () {
   }

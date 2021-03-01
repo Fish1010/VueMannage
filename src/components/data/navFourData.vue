@@ -51,13 +51,12 @@ r<template>
               </section>
               <el-table :data="operational"
                         stripe
-                        :default-sort = "{prop: 'menuUseCount', order: 'descending'}"
                         style="width: 100%">
                 <el-table-column prop="loginName"
                                   label="登录账户">
                 </el-table-column>
                 <el-table-column prop="userName"
-                                  label="用户姓名">
+                                  label="电影名称">
                 </el-table-column>
                 <el-table-column prop="companyName"
                                   label="归属公司">
@@ -69,17 +68,15 @@ r<template>
                                   label="性别">
                 </el-table-column>
                 <el-table-column prop="loginCount"
-                                  sortable
                                   label="登录次数">
                   <template slot-scope="scope">
-                    <div style="color: #549fff" @click="toLogDetail(scope.row)">{{scope.row.loginCount}}</div>
+                    <div style="color: #549fff" @click="toLogDetail(scope.row)"><span class="number">{{scope.row.loginCount}}</span></div>
                   </template>
                 </el-table-column>
                 <el-table-column prop="menuUseCount"
-                                  sortable
                                   label="菜单使用次数">
                   <template slot-scope="scope">
-                    <div style="color: #549fff" @click="toUseDetail(scope.row)">{{scope.row.menuUseCount}}</div>
+                    <div style="color: #549fff" @click="toUseDetail(scope.row)"><span class="number">{{scope.row.menuUseCount}}</span></div>
                   </template>
                 </el-table-column>
               </el-table>
@@ -128,9 +125,7 @@ export default {
   },
   methods: {
     init () {
-      this.getOperational().then( (res) => {
-        // console.log(res)
-      })
+      this.getOperational()
     },
     handleOpen (key, keyPath) {
     },
@@ -159,7 +154,9 @@ export default {
     ...mapActions(['getOperational', 'getOpDetail']),
   },
   computed: {
-    ...mapState(['operational'])
+    ...mapState({
+      operational: ({draggAble}) => draggAble.operational,
+    })
   },
   mounted () {
     this.init()
@@ -218,6 +215,9 @@ export default {
   display: inline-block;
   width: 200px;
   margin-right: 10px;
+}
+.number:hover{
+  cursor: pointer;
 }
 
 </style>

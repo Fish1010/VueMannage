@@ -17,7 +17,7 @@
           >
             <el-menu-item index="/">
                 <i class="el-icon-menu"></i>
-                <span>营销资源管理</span>
+                <span>用户资源管理</span>
             </el-menu-item>
 
             <el-menu-item index="/datadragg">
@@ -113,5 +113,8 @@ export default {
 .el-menu{
   height: calc(100vh - 60px);
   width: 100%;
+}
+.el-menu-item-group .el-menu-item{
+  text-align: center;
 }
 </style>

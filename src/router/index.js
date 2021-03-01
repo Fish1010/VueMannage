@@ -9,6 +9,7 @@ import MarketActivityManagement from '@/components/data/common/marketActivityMan
 import MarketOperationAnalysis from '@/components/data/common/marketOperationAnalysis'
 import PartnerManagement from '@/components/data/common/partnerManagement'
 import RecommendMaterialLibrary from '@/components/data/common/recommendMaterialLibrary'
+import DialogAddUser from '@/components/data/common/dialogAddUser'
 import Picture from '@/demo/Picture'
 import TurnPicture from '@/demo/TurnPicture'
 import JingDong from '@/demo/JingDong'
@@ -19,7 +20,17 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '/', name: 'NavOneData', component: NavOneData },
+    { path: '/',
+      name: 'NavOneData',
+      component: NavOneData,
+      // children: [
+      //   {
+      //     path: '/addUser',
+      //     name: 'NavTwoData',
+      //     component: NavTwoData,
+      //   }
+      // ]
+    },
     { path: '/navtwo', name: 'NavTwoData', component: NavTwoData },
     { path: '/navfour', name: 'NavFourData', component: NavFourData },
     { path: '/picture', name: 'Picture', component: Picture},
@@ -45,6 +56,7 @@ export default new Router({
     { path: '/operation', name: 'MarketOperationAnalysis', component: MarketOperationAnalysis },
     { path: '/partner', name: 'PartnerManagement', component: PartnerManagement },
     { path: '/recommend', name: 'RecommendMaterialLibrary', component: RecommendMaterialLibrary },
+    // { path: '/addUser', name: 'DialogAddUser', component: DialogAddUser },
   ],
   mode: "history"
 })

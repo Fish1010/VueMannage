@@ -5,15 +5,15 @@
     <div class="draggable">
       <Draggable  
         class="aimdrag"
-        :list="menuList || []"
+        :list="menuLists || []"
         :group="{name: 'special'}"
         @change="handleChange"
         ref="getStyle"
         >
-        <div 
+        <div
           class="act"
-          v-for="(ele, index) in menuList" 
-          :key="index+1" 
+          v-for="(ele, index) in menuLists"
+          :key="index+1"
           @click="addActive(ele, index)"
         >
           <div v-if="ele" :is="ele.name" v-bind="ele.option"></div>
@@ -72,7 +72,8 @@ export default {
       contentList: [],
       num: null,
       tabFlag: true,
-      flag: false
+      flag: false,
+      menuLists: [],
     }
   },
   components: {
@@ -110,8 +111,8 @@ export default {
       this.contentList.push(List[ind].textContent)
     },
     handleChange (arr) {
+      this.menuLists.push(arr)
       this.saveMenulist(arr)
-      // console.log(this.menuList)
     },
     ...mapMutations({
       saveMenulist: 'SAVE_MENULIST',
@@ -142,7 +143,12 @@ export default {
     }
   },
   computed: {
-    ...mapState(['menuList'])
+    ...mapState({
+      menuList: ({draggAble}) => draggAble.menuList,
+    })
+  },
+  created () {
+    this.menuLists = this.menuList;
   },
   mounted() {
   },

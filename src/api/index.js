@@ -21,5 +21,8 @@ export const reqTabMenu = () => ajax('/tabmenu')
 //请求用户操作统计
 export const reqOperational = () => ajax('/operational')
 
-//请求用户操作详情
+//请求用户操作菜单使用详情
 export const reqUserOpDetails = () => ajax('/userOpDetails')
+
+//请求用户操作登陆详情
+export const reqUserOpDetail = () => ajax('/userOpDetail')

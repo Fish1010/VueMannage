@@ -1,5 +1,5 @@
 <template>
-  <el-row>
+  <div>
     <quill-editor v-model="content"
       :options="editorOption"
       @blur="onEditorBlur($event)"
@@ -7,7 +7,13 @@
       @change="onEditorChange($event)"
     >
     </quill-editor>
-  </el-row>
+    <div style="width：40px">
+      ————————————————————————————————————————————————————————————————
+    </div>
+    <div>
+
+    </div>
+  </div>
 </template>
 
 <script>

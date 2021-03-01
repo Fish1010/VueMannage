@@ -1,28 +1,22 @@
+import * as types from '@/store/types'
+import APT from '@/utils/api'
 import {
-  // RECEIVE_ADDRESS,
-  // RECEIVE_CATEGORYS,
-  // RECEIVE_SHOPS,
-  RECEIVE_TABMENU,
-  RECEIVE_OPERATIONAL,
-  RECEIVE_USEROPDETAIL,
-} from './mutation-types'
-
-import { 
   // reqAddress,
   // reqFoodCategorys,
   // reqShops,
   reqTabMenu,
   reqOperational,
   reqUserOpDetails,
-} from '@/api/index'
+  reqUserOpDetail,
+} from '@/api'
 
-export default {
+const actions = {
   //异步获取视频tab
   async getTabMenu ({commit}) {
     const result = await reqTabMenu()
     if (result.code===0) {
       const tabmenu = result.tabmenu
-      commit(RECEIVE_TABMENU, {tabmenu})
+      commit(types.RECEIVE_TABMENU, {tabmenu})
     }
   },
 
@@ -31,17 +25,28 @@ export default {
     const result = await reqOperational()
     if (result.code===0) {
       const operational = result.data
-      commit(RECEIVE_OPERATIONAL, {operational})
+      commit(types.RECEIVE_OPERATIONAL, {operational})
       return operational
     }
   },
 
-  //异步获取操作详情
-  async getOpDetail ({commit}) {
+  //异步获取菜单使用详情
+  async getOpDetails ({commit}) {
     const result = await reqUserOpDetails()
     if (result.code===0) {
-      const userOpDetails = result.data
-      commit(RECEIVE_USEROPDETAIL, {userOpDetails})
+      const userOpDetails = result.data;
+      commit(types.RECEIVE_USEROPDETAILS, {userOpDetails});
+      return userOpDetails;
+    }
+  },
+
+  //异步获取登陆详情
+  async getOpDetail ({commit}) {
+    const result = await reqUserOpDetail()
+    if (result.code===0) {
+      const userOpDetail = result.data;
+      commit(types.RECEIVE_USEROPDETAIL, {userOpDetail});
+      return userOpDetail;
     }
   },
 
@@ -51,7 +56,7 @@ export default {
 //     const geohash = state.latitude + ',' + state.longitude
 //     const result = await reqAddress(geohash)
 //     //提交一个mutation
-//     if(result.code === 0){ //0表示请求成功 
+//     if(result.code === 0){ //0表示请求成功
 //       //查看接口文档,查看返回数据
 //       const address = result.data
 //       commit(RECEIVE_ADDRESS, {address})
@@ -83,5 +88,6 @@ export default {
 //       commit(RECEIVE_SHOPS, {shops})
 //     }
 //   }
-
 }
+
+export default actions

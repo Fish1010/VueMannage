@@ -1,428 +1,425 @@
 <template>
-  <div style="width: 100%">
-    <Scrollbar>
-      <div style="width: 100%">
-        <div class="header" style="width: 100%; height: 30px; background: #ddd; color: #999">
-          <div class="head" style="width: 1200px; height: 100%; margin: 0 auto; font-size: 12px">
-            <div class="he-le">
-              <p style="line-height: 30px">
-                <span><i class="el-icon-location" style="color: #f00; font-size: 16px"></i></span> 
-                江苏
-              </p>
+  <div style="width: 100%; overflow-x: hidden">
+    <div style="width: 100%">
+      <div class="header" style="width: 100%; height: 30px; background: #ddd; color: #999">
+        <div class="head" style="width: 1200px; height: 100%; margin: 0 auto; font-size: 12px">
+          <div class="he-le">
+            <p style="line-height: 30px">
+              <span><i class="el-icon-location" style="color: #f00; font-size: 16px"></i></span> 
+              江苏
+            </p>
+          </div>
+          <div class="he-ri">
+            <ul>
+              <li>手机京东</li>
+              <li>|</li>
+              <li>网址导航</li>
+              <li>|</li>
+              <li>客户服务</li>
+              <li>|</li>
+              <li  class="chose">企业采购</li>
+              <li>|</li>
+              <li>京东会员</li>
+              <li>|</li>
+              <li>我的京东</li>
+              <li>|</li>
+              <li>我的订单</li>
+              <li>|</li>
+              <li><a href=""  class="chose">免费注册</a></li>
+              <li><a href="">你好,请登录</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <header class="nav">
+        <div style="width: 1200px; margin: 0 auto;">
+          <div class="logo"></div>
+          <div style="width: 800px; height: 140px; margin: 0 auto; float: left">
+            <input type="text" class="input" placeholder="花花拉链裤">
+            <div class="seach pointer"><i class="el-icon-search"></i></div>
+            <button class="nv-but pointer"><span><i class="el-icon-shopping-cart-2"></i></span> 我的购物车</button>
+            <div class="span">
+              <span class="chose">男士护肤品&nbsp;&nbsp;</span>
+              <span>锦绣黄桃&nbsp;&nbsp;</span>
+              <span>品质家纺&nbsp;&nbsp;</span>
+              <span>小米10&nbsp;&nbsp;</span>
+              <span>车主福利&nbsp;&nbsp;</span>
+              <span>手机&nbsp;&nbsp;</span>
+              <span>每100-50&nbsp;&nbsp;</span>
+              <span>补水面膜&nbsp;&nbsp;</span>
+              <span>京东整机</span>
             </div>
-            <div class="he-ri">
+            <div class="nav-li">
               <ul>
-                <li>手机京东</li>
-                <li>|</li>
-                <li>网址导航</li>
-                <li>|</li>
-                <li>客户服务</li>
-                <li>|</li>
-                <li  class="chose">企业采购</li>
-                <li>|</li>
-                <li>京东会员</li>
-                <li>|</li>
-                <li>我的京东</li>
-                <li>|</li>
-                <li>我的订单</li>
-                <li>|</li>
-                <li><a href=""  class="chose">免费注册</a></li>
-                <li><a href="">你好,请登录</a></li>
+                <li class="chose">秒杀</li>
+                <li class="chose">优惠券</li>
+                <li>PLUS会员</li>
+                <li>品牌闪购</li>
+                <li>拍卖</li>
+                <li>京东家电</li>
+                <li>京东超市</li>
+                <li>京东生鲜</li>
+                <li>京东国际</li>
+                <li>京东金融</li>
               </ul>
+            </div>
+          </div>
+          <div class="down pointer"></div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="ma-le">
+          <ul>
+            <li><span>家用电器</span></li>
+            <li><span>手机</span>/<span>运营商</span>/<span>数码</span></li>
+            <li><span>电脑</span>/<span>办公</span></li>
+            <li><span>家居</span>/<span>家具</span>/<span>家装</span>/<span>厨具</span></li>
+            <li><span>家用电器</span></li>
+            <li><span>手机</span>/<span>运营商</span>/<span>数码</span></li>
+            <li><span>电脑</span>/<span>办公</span></li>
+            <li><span>家居</span>/<span>家具</span>/<span>家装</span>/<span>厨具</span></li>
+            <li><span>家用电器</span></li>
+            <li><span>手机</span>/<span>运营商</span>/<span>数码</span></li>
+            <li><span>电脑</span>/<span>办公</span></li>
+            <li><span>家居</span>/<span>家具</span>/<span>家装</span>/<span>厨具</span></li>
+            <li><span>家用电器</span></li>
+            <li><span>手机</span>/<span>运营商</span>/<span>数码</span></li>
+            <li><span>电脑</span>/<span>办公</span></li>
+            <li><span>家居</span>/<span>家具</span>/<span>家装</span>/<span>厨具</span></li>
+            <li><span>电脑</span>/<span>办公</span></li>
+            <li><span>家居</span>/<span>家具</span>/<span>家装</span>/<span>厨具</span></li>
+          </ul>
+        </div>
+        <div class="ma-cen">
+          <div class="block">
+            <el-carousel trigger="click" height="470px">
+              <el-carousel-item v-for="(item, index) in 7" :key="index">
+                <h3 class="small"></h3>
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+        </div>
+        <div class="ma-cen-ri">
+          <div class="block">
+            <el-carousel trigger="click" height="470px" indicator-position="none">
+              <el-carousel-item v-for="(item, index) in 3" :key="index">
+                <div v-if="item == 1">
+                  <div><img src="../assets/jd/8.jpg" width="190px"></div>
+                  <div><img src="../assets/jd/9.jpg" width="190px" style="margin: 10px 0"></div>
+                  <div><img src="../assets/jd/10.jpg" width="190px"></div>
+                </div>
+                <div v-if="item == 2">
+                  <div><img src="../assets/jd/11.jpg" width="190px"></div>
+                  <div><img src="../assets/jd/12.jpg" width="190px" style="margin: 10px 0"></div>
+                  <div><img src="../assets/jd/13.jpg" width="190px"></div>
+                </div>
+                <div v-if="item == 3">
+                  <div><img src="../assets/jd/14.jpg" width="190px"></div>
+                  <div><img src="../assets/jd/15.jpg" width="190px" style="margin: 10px 0"></div>
+                  <div><img src="../assets/jd/16.jpg" width="190px"></div>
+                </div>
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+        </div>
+        <div class="ma-ri">
+          <div class="ri-top">
+            <div style="height: 62px">
+              <div class="ri-logo pointer"><img src="../assets/jd/logo.png" width="40px"></div>
+              <div class="ri-hi">
+                <p class="hi pointer">Hi~欢迎逛京东!</p>
+                <p><span class="pointer">登陆</span> | <span class="pointer">注册</span></p>
+              </div>
+            </div>
+            <div class="ri-but">
+              <el-button type="primary" round>新人福利</el-button>
+              <el-button type="primary" round>PLUS会员</el-button>
             </div>
           </div>
         </div>
-        <header class="nav">
-          <div style="width: 1200px; margin: 0 auto;">
-            <div class="logo"></div>
-            <div style="width: 800px; height: 140px; margin: 0 auto; float: left">
-              <input type="text" class="input" placeholder="花花拉链裤">
-              <div class="seach pointer"><i class="el-icon-search"></i></div>
-              <button class="nv-but pointer"><span><i class="el-icon-shopping-cart-2"></i></span> 我的购物车</button>
-              <div class="span">
-                <span class="chose">男士护肤品&nbsp;&nbsp;</span>
-                <span>锦绣黄桃&nbsp;&nbsp;</span>
-                <span>品质家纺&nbsp;&nbsp;</span>
-                <span>小米10&nbsp;&nbsp;</span>
-                <span>车主福利&nbsp;&nbsp;</span>
-                <span>手机&nbsp;&nbsp;</span>
-                <span>每100-50&nbsp;&nbsp;</span>
-                <span>补水面膜&nbsp;&nbsp;</span>
-                <span>京东整机</span>
-              </div>
-              <div class="nav-li">
-                <ul>
-                  <li class="chose">秒杀</li>
-                  <li class="chose">优惠券</li>
-                  <li>PLUS会员</li>
-                  <li>品牌闪购</li>
-                  <li>拍卖</li>
-                  <li>京东家电</li>
-                  <li>京东超市</li>
-                  <li>京东生鲜</li>
-                  <li>京东国际</li>
-                  <li>京东金融</li>
-                </ul>
-              </div>
-            </div>
-            <div class="down pointer"></div>
-          </div>
-        </header>
-        <main class="main">
-          <div class="ma-le">
+      </main>
+      <footer class="foo">
+        <div class="seckill">
+          <div class="elevator" id="ele">
             <ul>
-              <li><span>家用电器</span></li>
-              <li><span>手机</span>/<span>运营商</span>/<span>数码</span></li>
-              <li><span>电脑</span>/<span>办公</span></li>
-              <li><span>家居</span>/<span>家具</span>/<span>家装</span>/<span>厨具</span></li>
-              <li><span>家用电器</span></li>
-              <li><span>手机</span>/<span>运营商</span>/<span>数码</span></li>
-              <li><span>电脑</span>/<span>办公</span></li>
-              <li><span>家居</span>/<span>家具</span>/<span>家装</span>/<span>厨具</span></li>
-              <li><span>家用电器</span></li>
-              <li><span>手机</span>/<span>运营商</span>/<span>数码</span></li>
-              <li><span>电脑</span>/<span>办公</span></li>
-              <li><span>家居</span>/<span>家具</span>/<span>家装</span>/<span>厨具</span></li>
-              <li><span>家用电器</span></li>
-              <li><span>手机</span>/<span>运营商</span>/<span>数码</span></li>
-              <li><span>电脑</span>/<span>办公</span></li>
-              <li><span>家居</span>/<span>家具</span>/<span>家装</span>/<span>厨具</span></li>
-              <li><span>电脑</span>/<span>办公</span></li>
-              <li><span>家居</span>/<span>家具</span>/<span>家装</span>/<span>厨具</span></li>
+              <li>京东秒杀</li>
+              <li>特色优选</li>
+              <li>频道广场</li>
+              <li>为你推荐</li>
+              <li>
+                <p><i class="el-icon-phone-outline"></i></p>
+                <p>客服</p>
+              </li>
+              <li>
+                <p><i class="el-icon-edit"></i></p>
+                <p>反馈</p>
+              </li>
+              <li v-if="visible" @click="backTop" id="color">
+                <p><i class="el-icon-arrow-up"></i></p>
+                <p>顶部</p>
+              </li>
             </ul>
           </div>
-          <div class="ma-cen">
-            <div class="block">
-              <el-carousel trigger="click" height="470px">
-                <el-carousel-item v-for="(item, index) in 7" :key="index">
-                  <h3 class="small"></h3>
-                </el-carousel-item>
-              </el-carousel>
+          <div class="sec-one">
+            <h2 class="h">京东秒杀</h2>
+            <p class="time"><span>12小时</span> 秒杀 倒计时</p>
+            <div class="back-time">
+              <li class="li">{{hour}}</li>
+              <li>:</li>
+              <li class="li">{{minutes}}</li>
+              <li>:</li>
+              <li class="li">{{seconds}}</li>
             </div>
           </div>
-          <div class="ma-cen-ri">
+          <div class="sec-two">
+            <el-carousel 
+              trigger="click" 
+              height="260px" 
+              indicator-position = "none"
+              :autoplay="false"
+            >
+              <el-carousel-item v-for="item in 5" :key="item">
+                <div v-if="item == 1" class="container">
+                  <div class="list list-1">
+                    <img src="../assets/jd/19.jpg">
+                    <p class="title">连尼亚手表</p>
+                    <p class="price"><span>¥1148.00</span> <del>¥1399.00</del></p>
+                  </div>
+                  <div class="list list-2">
+                    <img src="../assets/jd/20.jpg">
+                    <p class="title">禧天龙收纳柜</p>
+                    <p class="price"><span>¥399.00</span> <del>¥489.00</del></p>
+                  </div>
+                  <div class="list list-3">
+                    <img src="../assets/jd/21.jpg">
+                    <p class="title">森海塞尔</p>
+                    <p class="price"><span>¥899.00</span> <del>¥1499.00</del></p>
+                  </div>
+                  <div class="list list-4">
+                    <img src="../assets/jd/22.jpg">
+                    <p class="title">暇步士手包</p>
+                    <p class="price"><span>¥499.00</span> <del>¥1288.00</del></p>
+                  </div>
+                </div>
+                <div v-if="item == 2" class="container">
+                  <div class="list list-1">
+                    <img src="../assets/jd/19.jpg">
+                    <p class="title">连尼亚手表</p>
+                    <p class="price"><span>¥1148.00</span> <del>¥1399.00</del></p>
+                  </div>
+                  <div class="list list-2">
+                    <img src="../assets/jd/20.jpg">
+                    <p class="title">禧天龙收纳柜</p>
+                    <p class="price"><span>¥399.00</span> <del>¥489.00</del></p>
+                  </div>
+                  <div class="list list-3">
+                    <img src="../assets/jd/21.jpg">
+                    <p class="title">森海塞尔</p>
+                    <p class="price"><span>¥899.00</span> <del>¥1499.00</del></p>
+                  </div>
+                  <div class="list list-4">
+                    <img src="../assets/jd/22.jpg">
+                    <p class="title">暇步士手包</p>
+                    <p class="price"><span>¥499.00</span> <del>¥1288.00</del></p>
+                  </div>
+                </div>
+                <div v-if="item == 3" class="container">
+                  <div class="list list-1">
+                    <img src="../assets/jd/19.jpg">
+                    <p class="title">连尼亚手表</p>
+                    <p class="price"><span>¥1148.00</span> <del>¥1399.00</del></p>
+                  </div>
+                  <div class="list list-2">
+                    <img src="../assets/jd/20.jpg">
+                    <p class="title">禧天龙收纳柜</p>
+                    <p class="price"><span>¥399.00</span> <del>¥489.00</del></p>
+                  </div>
+                  <div class="list list-3">
+                    <img src="../assets/jd/21.jpg">
+                    <p class="title">森海塞尔</p>
+                    <p class="price"><span>¥899.00</span> <del>¥1499.00</del></p>
+                  </div>
+                  <div class="list list-4">
+                    <img src="../assets/jd/22.jpg">
+                    <p class="title">暇步士手包</p>
+                    <p class="price"><span>¥499.00</span> <del>¥1288.00</del></p>
+                  </div>
+                </div>
+                <div v-if="item == 4" class="container">
+                  <div class="list list-1">
+                    <img src="../assets/jd/19.jpg">
+                    <p class="title">连尼亚手表</p>
+                    <p class="price"><span>¥1148.00</span> <del>¥1399.00</del></p>
+                  </div>
+                  <div class="list list-2">
+                    <img src="../assets/jd/20.jpg">
+                    <p class="title">禧天龙收纳柜</p>
+                    <p class="price"><span>¥399.00</span> <del>¥489.00</del></p>
+                  </div>
+                  <div class="list list-3">
+                    <img src="../assets/jd/21.jpg">
+                    <p class="title">森海塞尔</p>
+                    <p class="price"><span>¥899.00</span> <del>¥1499.00</del></p>
+                  </div>
+                  <div class="list list-4">
+                    <img src="../assets/jd/22.jpg">
+                    <p class="title">暇步士手包</p>
+                    <p class="price"><span>¥499.00</span> <del>¥1288.00</del></p>
+                  </div>
+                </div>
+                <div v-if="item == 5" class="container">
+                  <div class="list list-1">
+                    <img src="../assets/jd/19.jpg">
+                    <p class="title">连尼亚手表</p>
+                    <p class="price"><span>¥1148.00</span> <del>¥1399.00</del></p>
+                  </div>
+                  <div class="list list-2">
+                    <img src="../assets/jd/20.jpg">
+                    <p class="title">禧天龙收纳柜</p>
+                    <p class="price"><span>¥399.00</span> <del>¥489.00</del></p>
+                  </div>
+                  <div class="list list-3">
+                    <img src="../assets/jd/21.jpg">
+                    <p class="title">森海塞尔</p>
+                    <p class="price"><span>¥899.00</span> <del>¥1499.00</del></p>
+                  </div>
+                  <div class="list list-4">
+                    <img src="../assets/jd/22.jpg">
+                    <p class="title">暇步士手包</p>
+                    <p class="price"><span>¥499.00</span> <del>¥1288.00</del></p>
+                  </div>
+                </div>
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+          <div class="sec-three">
             <div class="block">
-              <el-carousel trigger="click" height="470px" indicator-position="none">
-                <el-carousel-item v-for="(item, index) in 3" :key="index">
+              <el-carousel trigger="click" height="260px">
+                <el-carousel-item v-for="item in 2" :key="item">
                   <div v-if="item == 1">
-                    <div><img src="../assets/jd/8.jpg" width="190px"></div>
-                    <div><img src="../assets/jd/9.jpg" width="190px" style="margin: 10px 0"></div>
-                    <div><img src="../assets/jd/10.jpg" width="190px"></div>
+                    <img src="../assets/jd/18.jpg" width="130px">
+                    <p class="p1">平板电脑秒杀专场</p>
+                    <p class="p2">爆款平板699起</p>
+                    <p class="p3"><span>品类秒杀 ></span></p>
                   </div>
                   <div v-if="item == 2">
-                    <div><img src="../assets/jd/11.jpg" width="190px"></div>
-                    <div><img src="../assets/jd/12.jpg" width="190px" style="margin: 10px 0"></div>
-                    <div><img src="../assets/jd/13.jpg" width="190px"></div>
-                  </div>
-                  <div v-if="item == 3">
-                    <div><img src="../assets/jd/14.jpg" width="190px"></div>
-                    <div><img src="../assets/jd/15.jpg" width="190px" style="margin: 10px 0"></div>
-                    <div><img src="../assets/jd/16.jpg" width="190px"></div>
+                    <img src="../assets/jd/17.jpg" width="130px">
+                    <p class="p1">三星手机秒杀专场</p>
+                    <p class="p2">全场最高立省1000元</p>
+                    <p class="p3"><span>大牌闪购 ></span></p>
                   </div>
                 </el-carousel-item>
               </el-carousel>
             </div>
           </div>
-          <div class="ma-ri">
-            <div class="ri-top">
-              <div style="height: 62px">
-                <div class="ri-logo pointer"><img src="../assets/jd/logo.png" width="40px"></div>
-                <div class="ri-hi">
-                  <p class="hi pointer">Hi~欢迎逛京东!</p>
-                  <p><span class="pointer">登陆</span> | <span class="pointer">注册</span></p>
-                </div>
+        </div>
+        <div class="bargin-price">
+          <div class="b-pri"></div>
+          <div class="brand"></div>
+        </div>
+        <div class="find">
+          <div class="f-video">
+            <div class="v-search">
+              <p class="pointer">探索新生活<i class="el-icon-right"></i></p>
+            </div>
+          </div>
+          <div class="f-transporter" @mouseenter="stop" @mouseleave="start">
+            <div class="con pointer">
+              <div class="item item1">
+                <img src="../assets/jd/27.jpg">
+                <p>OB 小雏菊英伦风 腕表</p>
               </div>
-              <div class="ri-but">
-                <el-button type="primary" round>新人福利</el-button>
-                <el-button type="primary" round>PLUS会员</el-button>
+              <div class="item item2">
+                <p>西铁城小牛皮腕表</p>
+                <img src="../assets/jd/28.jpg">
+              </div>
+              <div class="item item3">
+                <img src="../assets/jd/29.jpg">
+                <p>爱宝时 男士机械手表</p>
+              </div>
+              <div class="item item4">
+                <p>TIMBUK2 休闲 斜挎包</p>
+                <img src="../assets/jd/30.jpg">
+              </div>
+              <div class="item item5">
+                <img src="../assets/jd/31.jpg">
+                <p>蜜蜂 圆盘 女士腕表</p>
+              </div>
+              <div class="item item6">
+                <img src="../assets/jd/32.jpg">
+                <p>卓尼沙 钨金水钻 指环</p>
+              </div>
+              <div class="item item5">
+                <img src="../assets/jd/33.jpg">
+                <p>禾目玉阁 冰种翡翠 手镯</p>
+              </div>
+              <div class="item item6">
+                <img src="../assets/jd/34.jpg">
+                <p>满天星 女表</p>
+              </div>
+              <div class="item item1">
+                <img src="../assets/jd/27.jpg">
+                <p>OB 小雏菊英伦风 腕表</p>
+              </div>
+              <div class="item item2">
+                <p>西铁城小牛皮腕表</p>
+                <img src="../assets/jd/28.jpg">
+              </div>
+              <div class="item item3">
+                <img src="../assets/jd/29.jpg">
+                <p>爱宝时 男士机械手表</p>
+              </div>
+              <div class="item item4">
+                <p>TIMBUK2 休闲 斜挎包</p>
+                <img src="../assets/jd/30.jpg">
+              </div>
+              <div class="item item5">
+                <img src="../assets/jd/31.jpg">
+                <p>蜜蜂 圆盘 女士腕表</p>
+              </div>
+            
+            </div>
+            <div class="tp">
+              <div class="tip pointer">
+                <div id="move" @mousedown="dragStop"></div>
               </div>
             </div>
           </div>
-        </main>
-        <footer class="foo">
-          <div class="seckill">
-            <div class="elevator" id="ele">
-              <ul>
-                <li>京东秒杀</li>
-                <li>特色优选</li>
-                <li>频道广场</li>
-                <li>为你推荐</li>
-                <li>
-                  <p><i class="el-icon-phone-outline"></i></p>
-                  <p>客服</p>
-                </li>
-                <li>
-                  <p><i class="el-icon-edit"></i></p>
-                  <p>反馈</p>
-                </li>
-                <li v-if="visible" @click="backTop" id="color">
-                  <p><i class="el-icon-arrow-up"></i></p>
-                  <p>顶部</p>
-                </li>
-              </ul>
-            </div>
-            <div class="sec-one">
-              <h2 class="h">京东秒杀</h2>
-              <p class="time"><span>12小时</span> 秒杀 倒计时</p>
-              <div class="back-time">
-                <li class="li">{{hour}}</li>
-                <li>:</li>
-                <li class="li">{{minutes}}</li>
-                <li>:</li>
-                <li class="li">{{seconds}}</li>
-              </div>
-            </div>
-            <div class="sec-two">
-              <el-carousel 
-                trigger="click" 
-                height="260px" 
-                indicator-position = "none"
-                :autoplay="false"
-              >
-                <el-carousel-item v-for="item in 5" :key="item">
-                  <div v-if="item == 1" class="container">
-                    <div class="list list-1">
-                      <img src="../assets/jd/19.jpg">
-                      <p class="title">连尼亚手表</p>
-                      <p class="price"><span>¥1148.00</span> <del>¥1399.00</del></p>
-                    </div>
-                    <div class="list list-2">
-                      <img src="../assets/jd/20.jpg">
-                      <p class="title">禧天龙收纳柜</p>
-                      <p class="price"><span>¥399.00</span> <del>¥489.00</del></p>
-                    </div>
-                    <div class="list list-3">
-                      <img src="../assets/jd/21.jpg">
-                      <p class="title">森海塞尔</p>
-                      <p class="price"><span>¥899.00</span> <del>¥1499.00</del></p>
-                    </div>
-                    <div class="list list-4">
-                      <img src="../assets/jd/22.jpg">
-                      <p class="title">暇步士手包</p>
-                      <p class="price"><span>¥499.00</span> <del>¥1288.00</del></p>
-                    </div>
-                  </div>
-                  <div v-if="item == 2" class="container">
-                    <div class="list list-1">
-                      <img src="../assets/jd/19.jpg">
-                      <p class="title">连尼亚手表</p>
-                      <p class="price"><span>¥1148.00</span> <del>¥1399.00</del></p>
-                    </div>
-                    <div class="list list-2">
-                      <img src="../assets/jd/20.jpg">
-                      <p class="title">禧天龙收纳柜</p>
-                      <p class="price"><span>¥399.00</span> <del>¥489.00</del></p>
-                    </div>
-                    <div class="list list-3">
-                      <img src="../assets/jd/21.jpg">
-                      <p class="title">森海塞尔</p>
-                      <p class="price"><span>¥899.00</span> <del>¥1499.00</del></p>
-                    </div>
-                    <div class="list list-4">
-                      <img src="../assets/jd/22.jpg">
-                      <p class="title">暇步士手包</p>
-                      <p class="price"><span>¥499.00</span> <del>¥1288.00</del></p>
-                    </div>
-                  </div>
-                  <div v-if="item == 3" class="container">
-                    <div class="list list-1">
-                      <img src="../assets/jd/19.jpg">
-                      <p class="title">连尼亚手表</p>
-                      <p class="price"><span>¥1148.00</span> <del>¥1399.00</del></p>
-                    </div>
-                    <div class="list list-2">
-                      <img src="../assets/jd/20.jpg">
-                      <p class="title">禧天龙收纳柜</p>
-                      <p class="price"><span>¥399.00</span> <del>¥489.00</del></p>
-                    </div>
-                    <div class="list list-3">
-                      <img src="../assets/jd/21.jpg">
-                      <p class="title">森海塞尔</p>
-                      <p class="price"><span>¥899.00</span> <del>¥1499.00</del></p>
-                    </div>
-                    <div class="list list-4">
-                      <img src="../assets/jd/22.jpg">
-                      <p class="title">暇步士手包</p>
-                      <p class="price"><span>¥499.00</span> <del>¥1288.00</del></p>
-                    </div>
-                  </div>
-                  <div v-if="item == 4" class="container">
-                    <div class="list list-1">
-                      <img src="../assets/jd/19.jpg">
-                      <p class="title">连尼亚手表</p>
-                      <p class="price"><span>¥1148.00</span> <del>¥1399.00</del></p>
-                    </div>
-                    <div class="list list-2">
-                      <img src="../assets/jd/20.jpg">
-                      <p class="title">禧天龙收纳柜</p>
-                      <p class="price"><span>¥399.00</span> <del>¥489.00</del></p>
-                    </div>
-                    <div class="list list-3">
-                      <img src="../assets/jd/21.jpg">
-                      <p class="title">森海塞尔</p>
-                      <p class="price"><span>¥899.00</span> <del>¥1499.00</del></p>
-                    </div>
-                    <div class="list list-4">
-                      <img src="../assets/jd/22.jpg">
-                      <p class="title">暇步士手包</p>
-                      <p class="price"><span>¥499.00</span> <del>¥1288.00</del></p>
-                    </div>
-                  </div>
-                  <div v-if="item == 5" class="container">
-                    <div class="list list-1">
-                      <img src="../assets/jd/19.jpg">
-                      <p class="title">连尼亚手表</p>
-                      <p class="price"><span>¥1148.00</span> <del>¥1399.00</del></p>
-                    </div>
-                    <div class="list list-2">
-                      <img src="../assets/jd/20.jpg">
-                      <p class="title">禧天龙收纳柜</p>
-                      <p class="price"><span>¥399.00</span> <del>¥489.00</del></p>
-                    </div>
-                    <div class="list list-3">
-                      <img src="../assets/jd/21.jpg">
-                      <p class="title">森海塞尔</p>
-                      <p class="price"><span>¥899.00</span> <del>¥1499.00</del></p>
-                    </div>
-                    <div class="list list-4">
-                      <img src="../assets/jd/22.jpg">
-                      <p class="title">暇步士手包</p>
-                      <p class="price"><span>¥499.00</span> <del>¥1288.00</del></p>
-                    </div>
-                  </div>
+        </div>
+        <div class="new">
+          <div class="n-list">
+            <h2 class="pointer">新品发布 <span><i class="el-icon-arrow-right"></i></span></h2>
+            <div class="card" style="border: 1px solid red;">
+              <el-carousel :interval="2000" indicator-position="none" type="card" height="250px" :autoplay="false">
+                <el-carousel-item v-for="item in 4" :key="item">
+                  <div v-if="item == 1">111</div>
+                  <div v-if="item == 2">222</div>
+                  <div v-if="item == 3">333</div>
+                  <div v-if="item == 4">444</div>
                 </el-carousel-item>
               </el-carousel>
             </div>
-            <div class="sec-three">
-              <div class="block">
-                <el-carousel trigger="click" height="260px">
-                  <el-carousel-item v-for="item in 2" :key="item">
-                    <div v-if="item == 1">
-                      <img src="../assets/jd/18.jpg" width="130px">
-                      <p class="p1">平板电脑秒杀专场</p>
-                      <p class="p2">爆款平板699起</p>
-                      <p class="p3"><span>品类秒杀 ></span></p>
-                    </div>
-                    <div v-if="item == 2">
-                      <img src="../assets/jd/17.jpg" width="130px">
-                      <p class="p1">三星手机秒杀专场</p>
-                      <p class="p2">全场最高立省1000元</p>
-                      <p class="p3"><span>大牌闪购 ></span></p>
-                    </div>
-                  </el-carousel-item>
-                </el-carousel>
-              </div>
-            </div>
           </div>
-          <div class="bargin-price">
-            <div class="b-pri"></div>
-            <div class="brand"></div>
+          <div class="n-list">
+            <h2 class="pointer">排行榜 <span><i class="el-icon-arrow-right"></i></span></h2>
+            <div></div>
           </div>
-          <div class="find">
-            <div class="f-video">
-              <div class="v-search">
-                <p class="pointer">探索新生活<i class="el-icon-right"></i></p>
-              </div>
-            </div>
-            <div class="f-transporter" @mouseenter="stop" @mouseleave="start">
-              <div class="con pointer">
-                <div class="item item1">
-                  <img src="../assets/jd/27.jpg">
-                  <p>OB 小雏菊英伦风 腕表</p>
-                </div>
-                <div class="item item2">
-                  <p>西铁城小牛皮腕表</p>
-                  <img src="../assets/jd/28.jpg">
-                </div>
-                <div class="item item3">
-                  <img src="../assets/jd/29.jpg">
-                  <p>爱宝时 男士机械手表</p>
-                </div>
-                <div class="item item4">
-                  <p>TIMBUK2 休闲 斜挎包</p>
-                  <img src="../assets/jd/30.jpg">
-                </div>
-                <div class="item item5">
-                  <img src="../assets/jd/31.jpg">
-                  <p>蜜蜂 圆盘 女士腕表</p>
-                </div>
-                <div class="item item6">
-                  <img src="../assets/jd/32.jpg">
-                  <p>卓尼沙 钨金水钻 指环</p>
-                </div>
-                <div class="item item5">
-                  <img src="../assets/jd/33.jpg">
-                  <p>禾目玉阁 冰种翡翠 手镯</p>
-                </div>
-                <div class="item item6">
-                  <img src="../assets/jd/34.jpg">
-                  <p>满天星 女表</p>
-                </div>
-                <div class="item item1">
-                  <img src="../assets/jd/27.jpg">
-                  <p>OB 小雏菊英伦风 腕表</p>
-                </div>
-                <div class="item item2">
-                  <p>西铁城小牛皮腕表</p>
-                  <img src="../assets/jd/28.jpg">
-                </div>
-                <div class="item item3">
-                  <img src="../assets/jd/29.jpg">
-                  <p>爱宝时 男士机械手表</p>
-                </div>
-                <div class="item item4">
-                  <p>TIMBUK2 休闲 斜挎包</p>
-                  <img src="../assets/jd/30.jpg">
-                </div>
-                <div class="item item5">
-                  <img src="../assets/jd/31.jpg">
-                  <p>蜜蜂 圆盘 女士腕表</p>
-                </div>
-              
-              </div>
-              <div class="tp">
-                <div class="tip pointer">
-                  <div id="move" @mousedown="dragStop"></div>
-                </div>
-              </div>
-            </div>
+          <div class="n-list">
+            <h2 class="pointer">逛好店 <span><i class="el-icon-arrow-right"></i></span></h2>
+            <div></div>
           </div>
-          <div class="new">
-            <div class="n-list">
-              <h2 class="pointer">新品发布 <span><i class="el-icon-arrow-right"></i></span></h2>
-              <div class="card" style="border: 1px solid red;">
-                <el-carousel :interval="2000" indicator-position="none" type="card" height="250px" :autoplay="false">
-                  <el-carousel-item v-for="item in 4" :key="item">
-                    <div v-if="item == 1">111</div>
-                    <div v-if="item == 2">222</div>
-                    <div v-if="item == 3">333</div>
-                    <div v-if="item == 4">444</div>
-                  </el-carousel-item>
-                </el-carousel>
-              </div>
-            </div>
-            <div class="n-list">
-              <h2 class="pointer">排行榜 <span><i class="el-icon-arrow-right"></i></span></h2>
-              <div></div>
-            </div>
-            <div class="n-list">
-              <h2 class="pointer">逛好店 <span><i class="el-icon-arrow-right"></i></span></h2>
-              <div></div>
-            </div>
-            <div class="n-list">
-              <h2 class="pointer">领券中心 <span><i class="el-icon-arrow-right"></i></span></h2>
-              <div></div>
-            </div>
+          <div class="n-list">
+            <h2 class="pointer">领券中心 <span><i class="el-icon-arrow-right"></i></span></h2>
+            <div></div>
           </div>
+        </div>
 
-        </footer>
-      </div>
-    </Scrollbar>
+      </footer>
+    </div>
   </div>
 </template>
 
 <script>
-import Scrollbar from '@/components/common/Scrollbar'
 import { mapState } from 'vuex'
 export default {
   name: 'JingDong',
@@ -437,7 +434,6 @@ export default {
     }
   },
   components: {
-    Scrollbar
   },
   computed: {
     ...mapState([ 'num' ])

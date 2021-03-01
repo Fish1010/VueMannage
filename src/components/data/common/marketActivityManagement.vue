@@ -22,12 +22,12 @@
                     </el-tooltip>
                   </div>
                   <div class="left-select">
-                    <el-select v-model="value" placeholder="累计" :popper-append-to-body="false">
+                    <el-select v-model="selectYear" @change="changeYear" placeholder="累计" :popper-append-to-body="false">
                       <el-option
                         v-for="item in options"
-                        :key="item.value"
+                        :key="item.label"
                         :label="item.label"
-                        :value="item.value">
+                        :value="item.label">
                       </el-option>
                     </el-select>
                   </div>
@@ -60,12 +60,36 @@
                 </div>
               </div>
               <div class="right">
-                <p style="text-align: center; line-height: 40px; "><i class="el-icon-s-help" style="color: #71ecf7; margin-right: 5px"></i>安全组件部署状态</p>
+                <p style="text-align: center; line-height: 40px; ">
+                  <i class="el-icon-s-help" style="color: #71ecf7; margin-right: 5px"></i>
+                  安全组件部署状态
+                </p>
                 <el-carousel :interval="3000" arrow="always" height="130px">
                   <el-carousel-item v-for="item in list" :key="item">
                     <h3>{{ item }}</h3>
                   </el-carousel-item>
                 </el-carousel>
+              </div>
+            </div>
+            <div class="body">
+              <div class="body-top">
+                <div class="body-desk">
+                  <i class="el-icon-s-help" style="color: #71ecf7"></i> 风险预警指标
+                  <el-tooltip class="item" effect="light" content="风险预警指标" placement="bottom">
+                    <i class="el-icon-warning-outline"
+                      style="color: #71ecf7; margin-left: 6px; opacity: 0.6; cursor: pointer">
+                    </i>
+                  </el-tooltip>
+                </div>
+              </div>
+              <div id="body-echarts"
+                  style="width: 400px;
+                        height: 300px;
+                        color: #ffffff;
+                        background: rgba(32, 60, 82, 0.35);
+                        border-right: solid 1px rgba(111, 114, 148, 0.37);"
+              >
+
               </div>
             </div>
           </el-main>
@@ -95,24 +119,147 @@ export default {
         {name: 'aaa'}
       ],
       options: [{
-        value: '选项1',
-        label: '2020'
+        label: '2020',
+        value: {
+          total: '10000',
+          review: {
+            now: '10',
+            old: '10',
+          },
+          solve: {
+            now: '100',
+            old: '300',
+          },
+          confirm: {
+            now: '1000',
+            old: '2000',
+          },
+          process: {
+            now: '10000',
+            old: '50000',
+          },
+        }
       }, {
-        value: '选项2',
-        label: '2019'
+        label: '2019',
+        value: {
+          total: '10000',
+          review: {
+            now: '10',
+            old: '10',
+          },
+          solve: {
+            now: '100',
+            old: '300',
+          },
+          confirm: {
+            now: '1000',
+            old: '2000',
+          },
+          process: {
+            now: '10000',
+            old: '50000',
+          },
+        }
       }, {
-        value: '选项3',
-        label: '2018'
+        label: '2018',
+        value: {
+          total: '10000',
+          review: {
+            now: '10',
+            old: '10',
+          },
+          solve: {
+            now: '100',
+            old: '300',
+          },
+          confirm: {
+            now: '1000',
+            old: '2000',
+          },
+          process: {
+            now: '10000',
+            old: '50000',
+          },
+        }
       }],
       value: '',
-      list: ['机房一安全', '机房二安全', '机房三危险']
+      list: ['机房一安全', '机房二安全', '机房三危险'],
+      selectYear: '累计'
     }
-  },
-  components: {
+  },  components: {
     Header, Left, Footer
   },
   methods: {
-  }
+    changeYear (val) {
+      console.log(this.options, val);
+    }
+  },
+  mounted () {
+    var echarts = require('echarts');
+    var myChart = echarts.init(document.getElementById('body-echarts'))
+    var option = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow',
+          shadowStyle : {                    // 阴影指示器样式设置
+            width: 'auto',                   // 阴影大小
+            color: 'rgba(150,150,150,0.3)'   // 阴影颜色
+          }
+        },
+        backgroundColor: 'rgba(252,255,255,0.8)',
+        textStyle: {
+          color: '#fff'
+        }
+      },
+      legend: {
+        data: ['最近一年预警KPI'],
+        textStyle: {
+          color: 'white'
+        },
+        backgroundColor: 'rgba(0,0,0,0)',
+      },
+      grid: {
+        left: '3%',
+        right: '8%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'value',
+        name : '%',
+        data: [20, 40, 60, 80, 100],
+        axisLine: {          // 坐标轴线
+          show: true,        // 默认显示，属性show控制显示与否
+          lineStyle: {       // 属性lineStyle控制线条样式
+            color: '#fff',
+            width: 2,
+            type: 'solid'
+          }
+        },
+      },
+      yAxis: {
+        type: 'category',
+        data: ['响应率', '处理率', '修复率', '损坏率', '丢弃率'],
+        axisLine: {          // 坐标轴线
+          show: true,        // 默认显示，属性show控制显示与否
+          lineStyle: {       // 属性lineStyle控制线条样式
+            color: '#fff',
+            width: 1,
+            type: 'solid'
+          }
+        },
+      },
+      series: [
+        {
+          name: '最近一年预警KPI',
+          type: 'bar',
+          data: [83, 53, 99, 34, 11]
+        },
+      ]
+    }
+    myChart.setOption(option)
+  },
 }
 </script>
 
@@ -160,7 +307,7 @@ export default {
   width: 80px;
   margin-right: 20px;
 }
-.el-main .top .left-title .left-select >>> .el-select-dropdown{
+.el-main >>> .el-select-dropdown{
   color: #d0e9f7;
   border: solid 1px #387b8a;
   background: rgba(28, 57, 76, 0.97);
@@ -168,17 +315,17 @@ export default {
   top: 25px !important;
 }
 
-.el-main .top .left-title .left-select >>> .el-select-dropdown .el-select-dropdown__item{
+.el-main >>> .el-select-dropdown .el-select-dropdown__item{
   color: #b2dbee;
 }
-.el-main .top .left-title .left-select >>> .el-select-dropdown .hover{
+.el-main >>> .el-select-dropdown .hover{
   color: #71ecf7;
   background: rgba(51, 101, 134, 0.97);
 }
-.el-main .top .left-title .left-select >>> .el-select-dropdown .popper__arrow{
+.el-main >>> .el-select-dropdown .popper__arrow{
   display: none;
 }
-.el-main .top .left-title >>> .el-input__inner{
+.el-main >>> .el-input__inner{
   height: 30px;
   line-height: 30px;
   color: #b2dcee;
@@ -239,7 +386,25 @@ export default {
 .top .right >>> .el-carousel__arrow--right{
   right: 0;
 }
-
+.body-top{
+  box-sizing: border-box;
+  padding-left: 25px;
+  height: 40px;
+  width: 100%;
+  margin-top: 190px;
+  line-height: 40px;
+  border-bottom: solid 1px rgba(1, 34, 48, 0.37);
+  background: linear-gradient(180deg, #2f91d3 18%, rgba(0, 140, 199, 0.37) 100%);
+}
+.body-desk{
+  color: #ffffff;
+  float: left;
+}
+.body-select{
+  float: left;
+  width: 80px;
+  margin-left: 20px;
+}
 
 .el-footer{
   text-align: center;

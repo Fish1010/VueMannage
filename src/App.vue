@@ -24,7 +24,7 @@ body{
 a{
   text-decoration: none;
 }
-ul, li{
+ul, ol, li{
   padding: 0;
   margin: 0;
   list-style: none;
